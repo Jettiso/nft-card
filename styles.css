@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap");
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141414;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    margin-top: 5rem;
+    padding: 1rem;
+    background-color: #06060e;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+}
+
+.card .card__img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    margin-bottom: 1rem;
+    background: #009fff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #ec2f4b,
+        #009fff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #ec2f4b,
+        #009fff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid rgba(128, 128, 128, 0.151);
+}
+.sb span:first-child {
+    color: #1d9fdb;
+}
+
+.sb span:nth-child(2) {
+    color: rgba(128, 128, 128, 0.575);
+}
+
+.text {
+    max-width: 30ch;
+    margin-bottom: 1rem;
+    color: rgba(128, 128, 128, 0.856);
+}
+
+.creator {
+    margin-top: 1rem;
+    color: rgb(143, 143, 143);
+}
+
+.creator span {
+    color: #242442;
+    margin-right: 0.4rem;
+}
