@@ -42,12 +42,12 @@ h1 {
     color: #f2f2f2;
     margin-bottom: 1rem;
     background: #009fff; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
+    background-image: -webkit-linear-gradient(
         to right,
         #ec2f4b,
         #009fff
     ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
+    background-image: linear-gradient(
         to right,
         #ec2f4b,
         #009fff
@@ -56,6 +56,18 @@ h1 {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+    background-position: left;
+    background-size: 200%;
+    animation: gradientmove 1.5s infinite alternate;
+}
+
+@keyframes gradientmove {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
 .sb {
     display: flex;
@@ -86,4 +98,51 @@ h1 {
 .creator span {
     color: #242442;
     margin-right: 0.4rem;
+}
+
+.creator a {
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    background: #009fff; /* fallback for old browsers */
+    background-image: -webkit-linear-gradient(
+        to right,
+        #ec2f4b,
+        #009fff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(
+        to right,
+        #ec2f4b,
+        #009fff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.creator a::after {
+    content: "";
+        position: absolute;
+        background: #fc466b; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+            to right,
+            #3f5efb,
+            #fc466b
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to right,
+            #3f5efb,
+            #fc466b
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+}
+
+.creator a:hover:after {
+    width: 100%;
 }
